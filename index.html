@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sarayu Burugu — Computer Science Engineer | Full Stack Developer | AI & QA Enthusiast</title>
+  <meta name="description" content="Portfolio of Sarayu Burugu — Computer Science & Engineering Student at SR University. Full Stack Developer, AI & ML Enthusiast, Cloud Explorer, and Manual Testing Intern at Agiledigest Consulting." />
+  <meta name="keywords" content="Sarayu Burugu, Computer Science Engineer, SR University, Full Stack Developer, QA Intern, Manual Testing, React, Spring Boot, AWS, LeetCode, Portfolio" />
+  <meta name="author" content="Sarayu Burugu" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor Elements -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===== GLOBAL NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" data-page="home" aria-label="Sarayu Burugu Home">
+        <svg class="logo-icon" viewBox="0 0 36 36" width="34" height="34">
+          <rect width="36" height="36" rx="10" fill="url(#logoGrad)"/>
+          <defs>
+            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="var(--accent)"/>
+              <stop offset="100%" stop-color="var(--accent-2)"/>
+            </linearGradient>
+          </defs>
+          <text x="18" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-size="20" font-weight="900" fill="#ffffff">SB</text>
+        </svg>
+        <span class="logo-text">Sarayu<span class="logo-accent">.dev</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-page="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-page="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-page="skills">Skills</a></li>
+        <li><a href="#experience" class="nav-link" data-page="experience">Experience</a></li>
+        <li><a href="#projects" class="nav-link" data-page="projects">Projects</a></li>
+        <li><a href="#contact" class="nav-link" data-page="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="theme-icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="theme-icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="#contact" class="nav-cta magnetic-btn" data-page="contact">Let's Talk</a>
+        <button class="hamburger" id="hamburger" aria-label="Open Navigation Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================
+       PAGE 1: HOME VIEW (#view-home)
+       ========================================================== -->
+  <div class="page-view active" id="view-home">
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <canvas id="particleCanvas" class="hero-particles"></canvas>
+      <div class="hero-gradient-blob blob-1"></div>
+      <div class="hero-gradient-blob blob-2"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-content reveal-hero">
+          <div class="hero-badge">
+            <span class="badge-dot pulse"></span>
+            <span>Interning now · Open to SDE / Full Stack roles</span>
+          </div>
+
+          <h1 class="hero-name">Sarayu <span class="hero-name-accent">Burugu</span></h1>
+
+          <div class="hero-headline">
+            Computer Science Engineer <span class="headline-sep">|</span> Full Stack Developer <span class="headline-sep">|</span> AI &amp; QA Enthusiast
+          </div>
+
+          <div class="hero-roles">
+            <span class="hero-role-static">Specializing in </span>
+            <span class="hero-typed" id="heroTyped"></span>
+            <span class="typed-cursor">|</span>
+          </div>
+
+          <p class="hero-desc">
+            Computer Science &amp; Engineering student at <strong>SR University</strong> with hands-on experience in software development, AI/ML, cloud architecture, and manual software testing. Focused on engineering scalable web applications and delivering bug-free, high-quality software solutions.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#snapshot" class="btn btn-primary magnetic-btn" onclick="document.getElementById('snapshot').scrollIntoView({behavior:'smooth'}); return false;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              Hiring Snapshot
+            </a>
+            <a href="#projects" class="btn btn-secondary magnetic-btn" data-page="projects">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              View Projects
+            </a>
+            <a href="https://drive.google.com/uc?export=download&id=1OCkyTzFGnS7EPeVRKrHJMQ4qfAFXlafF" target="_blank" rel="noopener noreferrer" class="btn btn-outline magnetic-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Resume
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/SarayuBurugu" target="_blank" rel="noopener" class="social-icon magnetic-btn" aria-label="GitHub Profile">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/sarayu-burugu-32b712287/" target="_blank" rel="noopener" class="social-icon magnetic-btn" aria-label="LinkedIn Profile">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://leetcode.com/u/sarayuuuu/" target="_blank" rel="noopener" class="social-icon magnetic-btn" aria-label="LeetCode Profile">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
+            </a>
+            <a href="mailto:burugusarayugoud@gmail.com" class="social-icon magnetic-btn" aria-label="Email Me">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal-hero">
+          <div class="hero-image-ring"></div>
+          <div class="hero-image-glow"></div>
+          <div class="hero-image-frame">
+            <img src="assets/profile.jpg" alt="Sarayu Burugu" class="hero-image" id="heroImage" />
+          </div>
+
+          <div class="hero-float-card card-qa">
+            <span class="float-pulse"></span>
+            <div>
+              <span class="float-num">QA Intern</span>
+              <span class="float-label">Agiledigest Consulting</span>
+            </div>
+          </div>
+
+          <div class="hero-float-card card-lc">
+            <span class="float-num">249+</span>
+            <span class="float-label">LeetCode Solved</span>
+          </div>
+
+          <div class="hero-float-card card-edu">
+            <span class="float-num">SRU '27</span>
+            <span class="float-label">B.Tech CSE</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK MARQUEE TICKER -->
+    <div class="marquee-section">
+      <div class="marquee-row marquee-left">
+        <div class="marquee-track">
+          <span class="marquee-item">Java</span>
+          <span class="marquee-item">Spring Boot</span>
+          <span class="marquee-item">React</span>
+          <span class="marquee-item">Python</span>
+          <span class="marquee-item">AWS</span>
+          <span class="marquee-item">MySQL</span>
+          <span class="marquee-item">REST APIs</span>
+          <span class="marquee-item">Manual Testing</span>
+          <span class="marquee-item">Jira</span>
+          <span class="marquee-item">Postman</span>
+          <span class="marquee-item">HTML5</span>
+          <span class="marquee-item">CSS3</span>
+          <span class="marquee-item">JavaScript</span>
+          <span class="marquee-item">Node.js</span>
+          <span class="marquee-item">Git</span>
+          <span class="marquee-item">TypeScript</span>
+          <!-- Duplicate for seamless loop -->
+          <span class="marquee-item">Java</span>
+          <span class="marquee-item">Spring Boot</span>
+          <span class="marquee-item">React</span>
+          <span class="marquee-item">Python</span>
+          <span class="marquee-item">AWS</span>
+          <span class="marquee-item">MySQL</span>
+          <span class="marquee-item">REST APIs</span>
+          <span class="marquee-item">Manual Testing</span>
+          <span class="marquee-item">Jira</span>
+          <span class="marquee-item">Postman</span>
+          <span class="marquee-item">HTML5</span>
+          <span class="marquee-item">CSS3</span>
+          <span class="marquee-item">JavaScript</span>
+          <span class="marquee-item">Node.js</span>
+          <span class="marquee-item">Git</span>
+          <span class="marquee-item">TypeScript</span>
+        </div>
+      </div>
+      <div class="marquee-row marquee-right">
+        <div class="marquee-track">
+          <span class="marquee-item accent">Data Structures</span>
+          <span class="marquee-item accent">Algorithms</span>
+          <span class="marquee-item accent">System Design</span>
+          <span class="marquee-item accent">DBMS</span>
+          <span class="marquee-item accent">Operating Systems</span>
+          <span class="marquee-item accent">Computer Networks</span>
+          <span class="marquee-item accent">OOP</span>
+          <span class="marquee-item accent">Hibernate</span>
+          <span class="marquee-item accent">Bootstrap</span>
+          <span class="marquee-item accent">Tailwind CSS</span>
+          <span class="marquee-item accent">PostgreSQL</span>
+          <span class="marquee-item accent">Express.js</span>
+          <span class="marquee-item accent">Vite</span>
+          <span class="marquee-item accent">Agile/Scrum</span>
+          <!-- Duplicate for seamless loop -->
+          <span class="marquee-item accent">Data Structures</span>
+          <span class="marquee-item accent">Algorithms</span>
+          <span class="marquee-item accent">System Design</span>
+          <span class="marquee-item accent">DBMS</span>
+          <span class="marquee-item accent">Operating Systems</span>
+          <span class="marquee-item accent">Computer Networks</span>
+          <span class="marquee-item accent">OOP</span>
+          <span class="marquee-item accent">Hibernate</span>
+          <span class="marquee-item accent">Bootstrap</span>
+          <span class="marquee-item accent">Tailwind CSS</span>
+          <span class="marquee-item accent">PostgreSQL</span>
+          <span class="marquee-item accent">Express.js</span>
+          <span class="marquee-item accent">Vite</span>
+          <span class="marquee-item accent">Agile/Scrum</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RECRUITER SNAPSHOT SECTION -->
+    <section class="section snapshot-section" id="snapshot">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Executive Summary</span>
+          <h2 class="section-title">Recruiter Snapshot</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="snapshot-card-container reveal">
+          <div class="hiring-snapshot-card">
+            <div class="snapshot-top-bar">
+              <div class="snapshot-profile-meta">
+                <div class="snapshot-avatar">SB</div>
+                <div>
+                  <h3 class="snapshot-name">Sarayu Burugu</h3>
+                  <p class="snapshot-sub">Computer Science &amp; Engineering · SR University ('27)</p>
+                </div>
+              </div>
+              <div class="snapshot-status-pill">
+                <span class="pulse-dot"></span> Open to SDE, Full Stack &amp; QA Roles
+              </div>
+            </div>
+
+            <div class="snapshot-grid-layout">
+              <div class="snapshot-info-panel">
+                <div class="snap-info-item">
+                  <span class="snap-label">Current Role</span>
+                  <span class="snap-val snap-highlight">Manual Testing Intern @ Agiledigest Consulting</span>
+                </div>
+                <div class="snap-info-item">
+                  <span class="snap-label">Duration &amp; Work Mode</span>
+                  <span class="snap-val">Sep 2026 — Present (Remote Internship)</span>
+                </div>
+                <div class="snap-info-item">
+                  <span class="snap-label">Target Opportunities</span>
+                  <span class="snap-val">Software Engineer (SDE) · Full Stack Developer · QA / Testing</span>
+                </div>
+                <div class="snap-info-item">
+                  <span class="snap-label">Tech Toolkit</span>
+                  <span class="snap-val">Java · Spring Boot · React · Python · AWS · Jira · Manual Testing</span>
+                </div>
+                <div class="snap-info-item">
+                  <span class="snap-label">Location &amp; Mobility</span>
+                  <span class="snap-val">Hanamkonda / Warangal, IN (Open to Remote &amp; Relocation)</span>
+                </div>
+              </div>
+
+              <div class="snapshot-metrics-panel">
+                <div class="snap-metric-card">
+                  <div class="sm-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg></div>
+                  <div>
+                    <span class="sm-num">249+</span>
+                    <span class="sm-txt">LeetCode Solved (83.3% Acc.)</span>
+                  </div>
+                </div>
+
+                <div class="snap-metric-card">
+                  <div class="sm-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></div>
+                  <div>
+                    <span class="sm-num">GitHub Repos</span>
+                    <span class="sm-txt">Featured Projects &amp; Code</span>
+                  </div>
+                </div>
+
+                <div class="snap-metric-card">
+                  <div class="sm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+                  <div>
+                    <span class="sm-num">8.2 CGPA</span>
+                    <span class="sm-txt">Academic Score · SRU</span>
+                  </div>
+                </div>
+
+                <div class="snap-metric-card">
+                  <div class="sm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                  <div>
+                    <span class="sm-num">Code Slayer '25</span>
+                    <span class="sm-txt">National Winner · NIT Delhi</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="snapshot-footer-actions">
+              <div class="snap-quick-links">
+                <a href="https://github.com/SarayuBurugu" target="_blank" rel="noopener" class="snap-link-btn">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/sarayu-burugu-32b712287/" target="_blank" rel="noopener" class="snap-link-btn">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn
+                </a>
+                <a href="https://leetcode.com/u/sarayuuuu/" target="_blank" rel="noopener" class="snap-link-btn">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
+                  LeetCode
+                </a>
+              </div>
+
+              <a href="https://drive.google.com/uc?export=download&id=1OCkyTzFGnS7EPeVRKrHJMQ4qfAFXlafF" target="_blank" rel="noopener noreferrer" class="btn btn-primary magnetic-btn">
+                Download Full Resume
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME QUICK OVERVIEW / HIGHLIGHT CARDS -->
+    <section class="section alt-bg">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Explore Portfolio</span>
+          <h2 class="section-title">Technical Expertise &amp; Career Highlights</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-cards reveal-stagger">
+          <div class="info-card highlight-card" style="cursor:pointer;" data-page="skills">
+            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+            <h3>Skills &amp; DSA Mastery</h3>
+            <p>Software Testing, Full Stack Java/React, AWS &amp; 249+ LeetCode Solved</p>
+            <span class="info-sub" style="color:var(--accent);font-weight:700;">Explore Skills &amp; LeetCode →</span>
+          </div>
+
+          <div class="info-card" style="cursor:pointer;" data-page="experience">
+            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+            <h3>Work Experience</h3>
+            <p>Manual Testing Intern @ Agiledigest Consulting &amp; AWS Solutions Architecture</p>
+            <span class="info-sub" style="color:var(--accent);font-weight:700;">View QA Operations →</span>
+          </div>
+
+          <div class="info-card" style="cursor:pointer;" data-page="projects">
+            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>
+            <h3>Featured Projects</h3>
+            <p>Chronex AI, Mahayudh Proctoring, StudySync &amp; Voice Assistant</p>
+            <span class="info-sub" style="color:var(--accent);font-weight:700;">View Projects →</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK STATS COUNTER BAR -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">By the Numbers</span>
+          <h2 class="section-title">Impact at a Glance</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="fun-stats-bar reveal-stagger">
+          <div class="fun-stat">
+            <span class="fun-stat-num">249<span class="stat-accent">+</span></span>
+            <span class="fun-stat-label">LeetCode Problems</span>
+          </div>
+          <div class="fun-stat">
+            <span class="fun-stat-num">113</span>
+            <span class="fun-stat-label">Day Max Streak</span>
+          </div>
+          <div class="fun-stat">
+            <span class="fun-stat-num">83.3<span class="stat-accent">%</span></span>
+            <span class="fun-stat-label">Acceptance Rate</span>
+          </div>
+          <div class="fun-stat">
+            <span class="fun-stat-num">8.2</span>
+            <span class="fun-stat-label">CGPA at SRU</span>
+          </div>
+          <div class="fun-stat">
+            <span class="fun-stat-num">4<span class="stat-accent">+</span></span>
+            <span class="fun-stat-label">Projects Shipped</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE ENGINEERING FOCUS PILLARS -->
+    <section class="section alt-bg">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Core Competencies</span>
+          <h2 class="section-title">Engineering Pillars &amp; Value Proposition</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="pillars-grid reveal-stagger">
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            </div>
+            <h3>Enterprise QA &amp; Manual Testing</h3>
+            <p>Active QA intern at Agiledigest Consulting testing flagship platform OptimaOrbit. Expertise in functional testing, test case design, defect tracking in Jira, and Postman API validation.</p>
+            <div class="pillar-tags">
+              <span class="pillar-tag">Manual Testing</span>
+              <span class="pillar-tag">Regression</span>
+              <span class="pillar-tag">Postman</span>
+              <span class="pillar-tag">Jira</span>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Full Stack Web Engineering</h3>
+            <p>Building high-performance, responsive web portals using React, TypeScript, Java, Spring Boot, and Node.js. Deep focus on modular clean architecture and reusable component design.</p>
+            <div class="pillar-tags">
+              <span class="pillar-tag">React</span>
+              <span class="pillar-tag">Spring Boot</span>
+              <span class="pillar-tag">TypeScript</span>
+              <span class="pillar-tag">REST APIs</span>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            </div>
+            <h3>Cloud Infrastructure &amp; Security</h3>
+            <p>AWS Academy Certified with practical simulation experience in modeling fault-tolerant multi-tier architectures, VPC subnetting, Route 53 DNS routing, and Multi-AZ RDS MySQL instances.</p>
+            <div class="pillar-tags">
+              <span class="pillar-tag">AWS EC2</span>
+              <span class="pillar-tag">Route 53</span>
+              <span class="pillar-tag">VPC</span>
+              <span class="pillar-tag">RDS</span>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+            </div>
+            <h3>Algorithmic Rigor &amp; Problem Solving</h3>
+            <p>Proven competitive programmer with 249+ LeetCode problems solved, an 83.3% acceptance rate, and a 113-day daily streak. Specialization in Graph Theory from AlgoUniversity Camp.</p>
+            <div class="pillar-tags">
+              <span class="pillar-tag">Data Structures</span>
+              <span class="pillar-tag">Graph Theory</span>
+              <span class="pillar-tag">DP</span>
+              <span class="pillar-tag">83.3% Acc.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4-STAGE ENGINEERING & QA LIFECYCLE -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">How Quality Happens</span>
+          <h2 class="section-title">End-to-End Engineering &amp; QA Lifecycle</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="workflow-steps-grid reveal-stagger">
+          <div class="workflow-step-card">
+            <span class="step-number-tag">PHASE 01</span>
+            <h3>Requirements &amp; Edge-Case Analysis</h3>
+            <p>Decomposing user stories into testable criteria. Identifying boundary values, error scenarios, and race conditions before writing a single line of code.</p>
+          </div>
+
+          <div class="workflow-step-card">
+            <span class="step-number-tag">PHASE 02</span>
+            <h3>Defensive Architecture &amp; Clean Code</h3>
+            <p>Implementing modular, decoupled frontend components and robust REST endpoints with input validation, error handling, and type safety.</p>
+          </div>
+
+          <div class="workflow-step-card">
+            <span class="step-number-tag">PHASE 03</span>
+            <h3>Rigorous Testing &amp; Defect Triaging</h3>
+            <p>Executing functional, regression, and cross-browser test cycles. Logging precise, reproducible bug reports in Jira with network logs and expected states.</p>
+          </div>
+
+          <div class="workflow-step-card">
+            <span class="step-number-tag">PHASE 04</span>
+            <h3>Cloud Deployment &amp; Health Monitoring</h3>
+            <p>Deploying onto scalable cloud infrastructure (AWS/Vercel) with health checks, SSL encryption, and continuous post-release verification.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECRUITER QUICK FAQ PREVIEW -->
+    <section class="section alt-bg">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Hiring Insights</span>
+          <h2 class="section-title">Quick Recruiter Q&amp;A</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="faq-grid reveal-stagger">
+          <div class="faq-card">
+            <h4><span class="faq-q-mark">Q:</span> What roles is Sarayu targeting?</h4>
+            <p>Software Engineer (SDE), Full Stack Developer (React / Java / Spring Boot), and Quality Assurance (QA / Manual Testing) roles.</p>
+          </div>
+
+          <div class="faq-card">
+            <h4><span class="faq-q-mark">Q:</span> What is her availability &amp; location preference?</h4>
+            <p>Currently pursuing B.Tech CSE (Class of 2027) at SR University. Open for immediate internships, co-ops, remote roles, and full-time hiring upon graduation.</p>
+          </div>
+
+          <div class="faq-card">
+            <h4><span class="faq-q-mark">Q:</span> What makes her profile stand out?</h4>
+            <p>A rare dual strength: exceptional algorithmic problem solving (249+ LeetCode, 113-day streak) combined with real enterprise QA internship experience at Agiledigest Consulting.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIFIED GLOBAL FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <a href="#home" class="footer-logo" data-page="home">
+            <svg class="logo-icon" viewBox="0 0 36 36" width="32" height="32">
+              <rect width="36" height="36" rx="8" fill="var(--accent)"/>
+              <text x="18" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-size="20" font-weight="900" fill="#ffffff">SB</text>
+            </svg>
+          </a>
+          <div class="footer-meta">
+            <h3>Sarayu Burugu</h3>
+            <p class="footer-tagline">Computer Science Engineer | Full Stack Developer | QA Enthusiast</p>
+          </div>
+          <nav class="footer-nav">
+            <a href="#home" data-page="home">Home</a>
+            <a href="#about" data-page="about">About</a>
+            <a href="#skills" data-page="skills">Skills</a>
+            <a href="#experience" data-page="experience">Experience</a>
+            <a href="#projects" data-page="projects">Projects</a>
+            <a href="#contact" data-page="contact">Contact</a>
+          </nav>
+          <div class="footer-socials">
+            <a href="https://github.com/SarayuBurugu" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+            <a href="https://www.linkedin.com/in/sarayu-burugu-32b712287/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="https://leetcode.com/u/sarayuuuu/" target="_blank" rel="noopener" aria-label="LeetCode"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg></a>
+            <a href="mailto:burugusarayugoud@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Sarayu Burugu. All rights reserved.</p>
+          <p>Built for modern engineering excellence.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ==========================================================
+       PAGE 2: ABOUT VIEW (#view-about)
+       ========================================================== -->
+  <div class="page-view" id="view-about">
+    <div class="page-hero-banner">
+      <div class="page-hero-container">
+        <span class="page-hero-tag">Who I Am</span>
+        <h1 class="page-hero-title">About <span>Sarayu Burugu</span></h1>
+        <p class="page-hero-sub">Computer Science &amp; Engineering Student at SR University | QA Intern &amp; Full Stack Developer passionate about engineering scalable, bug-free web applications.</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text reveal-left">
+            <p>
+              I am a performance-driven <strong>Computer Science &amp; Engineering</strong> student at <strong>SR University</strong> (Batch 2023–2027) with a solid foundation in Software Engineering, Full Stack Web Development, Cloud Architecture, Artificial Intelligence, and Software Quality Assurance.
+            </p>
+            <p>
+              Currently working as a <strong>Manual Testing Intern</strong> at <strong>Agiledigest Consulting Private Limited</strong>, I collaborate with engineering teams to execute end-to-end functional testing on the flagship platform <strong>OptimaOrbit</strong>, validate user workflows, design test suites, and document software defects using Jira.
+            </p>
+            <p>
+              My background combines strong algorithmic problem-solving—evidenced by solving <strong>249+ LeetCode problems</strong> with an <strong>83.3% acceptance rate</strong> and a <strong>113-day streak</strong>—with real-world project development using Java, Spring Boot, React, Node.js, and AWS cloud services.
+            </p>
+            <p>
+              I'm adept in <strong>agile methodologies</strong>, active debugging, code reviews, and collaborating in team environments to deliver robust, production-ready code.
+            </p>
+          </div>
+
+          <div class="about-cards reveal-stagger">
+            <div class="info-card">
+              <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+              <h3>Education</h3>
+              <p>B.Tech CSE, SR University</p>
+              <span class="info-sub">Expected Graduation: 2027 · CGPA: 8.2</span>
+            </div>
+
+            <div class="info-card highlight-card">
+              <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+              <h3>Current Internship</h3>
+              <p>Manual Testing Intern / QA</p>
+              <span class="info-sub">Agiledigest Consulting Pvt. Ltd. (Remote)</span>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+              <h3>Core Domains</h3>
+              <p>SDE · Full Stack · QA</p>
+              <span class="info-sub">React · Node · Spring Boot · AWS · Jira</span>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <h3>Location &amp; Mobility</h3>
+              <p>Hanamkonda / Warangal, IN</p>
+              <span class="info-sub">Open to Remote &amp; Relocation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION DETAIL SECTION -->
+    <section class="section alt-bg">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Academic Background</span>
+          <h2 class="section-title">Education</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="edu-detail-card reveal-scale">
+          <div class="edu-logo">SRU</div>
+          <div>
+            <h3>SR University, Hanamkonda, India</h3>
+            <span class="edu-degree">B.Tech in Computer Science &amp; Engineering (School of CS &amp; AI)</span>
+            <p class="edu-meta">CGPA: <strong>8.2 / 10.0</strong> · Expected May 2027<br>Selected as <strong>Semester Topper</strong></p>
+            <div class="edu-highlights">
+              <span>DBMS</span>
+              <span>Graph Theory</span>
+              <span>Cloud Computing</span>
+              <span>Algorithms</span>
+              <span>Data Structures</span>
+              <span>Operating Systems</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOFT SKILLS SECTION -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Beyond Code</span>
+          <h2 class="section-title">Soft Skills &amp; Strengths</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="soft-skills-grid reveal-stagger">
+          <div class="soft-skill-card">
+            <span class="soft-skill-emoji">🧠</span>
+            <h4>Logical Thinking</h4>
+            <p>Strong problem decomposition and algorithmic reasoning</p>
+          </div>
+          <div class="soft-skill-card">
+            <span class="soft-skill-emoji">🤝</span>
+            <h4>Team Collaboration</h4>
+            <p>Agile sprints, cross-functional teams, and code reviews</p>
+          </div>
+          <div class="soft-skill-card">
+            <span class="soft-skill-emoji">🔍</span>
+            <h4>Attention to Detail</h4>
+            <p>Thorough testing, precise bug reports, edge-case coverage</p>
+          </div>
+          <div class="soft-skill-card">
+            <span class="soft-skill-emoji">📈</span>
+            <h4>Continuous Learning</h4>
+            <p>Daily DSA practice, new tech exploration, certifications</p>
+          </div>
+          <div class="soft-skill-card">
+            <span class="soft-skill-emoji">⚡</span>
+            <h4>Agile Methodology</h4>
+            <p>Sprint planning, standups, iterative delivery cycles</p>
+          </div>
+          <div class="soft-skill-card">
+            <span class="soft-skill-emoji">💬</span>
+            <h4>Communication</h4>
+            <p>Clear documentation, stakeholder updates, technical writing</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSPIRATIONAL QUOTE -->
+    <section class="section alt-bg">
+      <div class="container">
+        <div class="quote-block reveal-scale">
+          <blockquote>
+            Build. Test. Ship. Repeat. — I believe great software is built by engineers who care about both the code and the user.
+          </blockquote>
+          <cite>— Sarayu Burugu</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- TERMINAL CODE WIDGET -->
+    <section class="section alt-bg">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">The Developer Object</span>
+          <h2 class="section-title">const sarayu = { ... }</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="terminal-widget reveal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="terminal-title">sarayu.config.js</span>
+            <span class="terminal-badge">JavaScript</span>
+          </div>
+          <div class="terminal-body">
+            <pre><code><span class="code-keyword">const</span> <span class="code-var">sarayu</span> = {
+  <span class="code-key">education</span>: <span class="code-string">"B.Tech CSE, SR University"</span>,
+  <span class="code-key">year</span>: <span class="code-num">4</span>,
+  <span class="code-key">working</span>: <span class="code-string">"Agiledigest — Manual Testing Intern"</span>,
+  <span class="code-key">stack</span>: [<span class="code-string">"Java"</span>, <span class="code-string">"Spring Boot"</span>, <span class="code-string">"React"</span>, <span class="code-string">"Python"</span>],
+  <span class="code-key">cloud</span>: [<span class="code-string">"AWS"</span>],
+  <span class="code-key">testing</span>: [<span class="code-string">"Manual"</span>, <span class="code-string">"Functional"</span>, <span class="code-string">"Regression"</span>, <span class="code-string">"API"</span>],
+  <span class="code-key">dsa</span>: { <span class="code-key">solved</span>: <span class="code-num">249</span>, <span class="code-key">acceptance</span>: <span class="code-string">"83.3%"</span> },
+  <span class="code-key">achievement</span>: <span class="code-string">"🏆 Code Slayer 2K25 — NIT Delhi"</span>,
+  <span class="code-key">motto</span>: <span class="code-string">"Build. Test. Ship. Repeat."</span>
+};</code></pre>
+            <span class="terminal-cursor">|</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW I WORK SECTION -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Work Philosophy</span>
+          <h2 class="section-title">How I Operate</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="principles-grid reveal">
+          <div class="principle-card">
+            <span class="principle-num">01</span>
+            <h3>Learn by Building</h3>
+            <p>I don't just study theory — I build real projects to solidify every concept I learn.</p>
+          </div>
+          <div class="principle-card">
+            <span class="principle-num">02</span>
+            <h3>Test Before Shipping</h3>
+            <p>Quality comes first. Every feature gets tested, validated, and documented before delivery.</p>
+          </div>
+          <div class="principle-card">
+            <span class="principle-num">03</span>
+            <h3>One Problem a Day</h3>
+            <p>Consistent DSA practice — 249+ LeetCode problems solved with an 83.3% acceptance rate.</p>
+          </div>
+          <div class="principle-card">
+            <span class="principle-num">04</span>
+            <h3>Document Everything</h3>
+            <p>Clean code, clear comments, detailed bug reports — communication is engineering.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section class="section alt-bg">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Verified Credentials</span>
+          <h2 class="section-title">Certifications & Training</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="certs-grid reveal">
+          <div class="cert-card-new cert-cloud">
+            <div class="cert-category-tag">☁️ Cloud</div>
+            <h3>AWS Academy Graduate — Cloud Foundations</h3>
+            <span class="cert-issuer-new">Amazon Web Services · 2024</span>
+            <div class="cert-topics-new">
+              <span>EC2</span><span>S3</span><span>IAM</span><span>Cloud Architecture</span>
+            </div>
+          </div>
+
+          <div class="cert-card-new cert-ai">
+            <div class="cert-category-tag">🤖 AI</div>
+            <h3>Building LLM Apps with Prompt Engineering</h3>
+            <span class="cert-issuer-new">NVIDIA · 2024</span>
+            <div class="cert-topics-new">
+              <span>LLMs</span><span>Prompt Engineering</span><span>AI Applications</span>
+            </div>
+          </div>
+
+          <div class="cert-card-new cert-biz">
+            <div class="cert-category-tag">📊 Business</div>
+            <h3>Career Essentials in Business Analysis</h3>
+            <span class="cert-issuer-new">Microsoft & LinkedIn · 2024</span>
+            <div class="cert-topics-new">
+              <span>Requirements</span><span>Stakeholders</span><span>Process Mapping</span>
+            </div>
+          </div>
+
+          <div class="cert-card-new cert-dev">
+            <div class="cert-category-tag">💻 Full Stack</div>
+            <h3>Java Full Stack Development Internship</h3>
+            <span class="cert-issuer-new">Industry Training · 2024</span>
+            <div class="cert-topics-new">
+              <span>Java</span><span>Spring Boot</span><span>Hibernate</span><span>MySQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACADEMIC & TECHNICAL MILESTONES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Key Milestones</span>
+          <h2 class="section-title">Academic &amp; Technical Trajectory</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="milestone-timeline reveal-stagger">
+          <div class="milestone-item">
+            <div class="milestone-dot">🎓</div>
+            <div class="milestone-card">
+              <span class="milestone-date">2023 — 2027 (Expected)</span>
+              <h3>Selected as Semester Topper — SR University</h3>
+              <p>Recognized for outstanding academic achievement in the School of CS &amp; AI with a CGPA of <strong>8.2 / 10.0</strong>. Mastered coursework in Database Management Systems (DBMS), Graph Theory, Cloud Computing, Operating Systems, and Advanced Algorithms.</p>
+            </div>
+          </div>
+
+          <div class="milestone-item">
+            <div class="milestone-dot">🏆</div>
+            <div class="milestone-card">
+              <span class="milestone-date">Code Slayer 2K25 — NIT Delhi</span>
+              <h3>National Hackathon Winner — Chronex Project</h3>
+              <p>Spearheaded development of Chronex, an AI-powered intelligent time companion across 8 independent modules in an intense 48-hour collaborative team sprint. Managed real-time data transformations and scheduling logic.</p>
+            </div>
+          </div>
+
+          <div class="milestone-item">
+            <div class="milestone-dot">⚡</div>
+            <div class="milestone-card">
+              <span class="milestone-date">Specialized Training</span>
+              <h3>AlgoUniversity Graph Theory Camp &amp; LeetCode Streak</h3>
+              <p>Completed intensive training in advanced graph traversals, topological sorting, shortest path algorithms, and dynamic programming. Maintained a <strong>113-day daily streak</strong> solving <strong>249+ DSA problems</strong> with an 83.3% acceptance rate.</p>
+            </div>
+          </div>
+
+          <div class="milestone-item">
+            <div class="milestone-dot">☁️</div>
+            <div class="milestone-card">
+              <span class="milestone-date">Industry Accreditation</span>
+              <h3>AWS Academy Graduate — Cloud Foundations &amp; Simulation</h3>
+              <p>Earned official AWS Academy certification in global cloud infrastructure, access control, and platform security. Successfully modeled resilient multi-tier architectures in the AWS Solutions Architecture Simulation on Forage.</p>
+            </div>
+          </div>
+
+          <div class="milestone-item">
+            <div class="milestone-dot">💼</div>
+            <div class="milestone-card">
+              <span class="milestone-date">July 2026 — Present</span>
+              <h3>Manual Testing &amp; QA Intern — Agiledigest Consulting</h3>
+              <p>Executing enterprise QA workflows on flagship platform <strong>OptimaOrbit</strong>. Designing test cases, logging defects in Jira, executing regression cycles, and verifying REST API endpoints using Postman.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QA PHILOSOPHY SECTION -->
+    <section class="section alt-bg">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Quality Mindset</span>
+          <h2 class="section-title">The QA-First Engineering Philosophy</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="principles-grid reveal-stagger">
+          <div class="principle-card">
+            <span class="principle-num">01</span>
+            <h3>Think in Boundary Conditions</h3>
+            <p>Anyone can write code that works when all inputs are perfect. Exceptional engineers obsess over null values, oversized payloads, edge cases, and unexpected user behaviors.</p>
+          </div>
+
+          <div class="principle-card">
+            <span class="principle-num">02</span>
+            <h3>Actionable, Reproducible Bug Reports</h3>
+            <p>A defect report is only as good as its reproducibility. Every Jira ticket includes exact prerequisites, steps to reproduce, actual vs expected outcomes, network payloads, and console logs.</p>
+          </div>
+
+          <div class="principle-card">
+            <span class="principle-num">03</span>
+            <h3>Regression is Non-Negotiable</h3>
+            <p>New features should never break existing functionality. Rigorous regression suites and smoke validations safeguard enterprise stability before every production release.</p>
+          </div>
+
+          <div class="principle-card">
+            <span class="principle-num">04</span>
+            <h3>Empathy for the End User</h3>
+            <p>Testing is not just checking boxes; it is advocating for the end user's trust, data integrity, seamless responsiveness, and frictionless digital experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIFIED GLOBAL FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <a href="#home" class="footer-logo" data-page="home">
+            <svg class="logo-icon" viewBox="0 0 36 36" width="32" height="32"><rect width="36" height="36" rx="8" fill="var(--accent)"/><text x="18" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-size="20" font-weight="900" fill="#ffffff">SB</text></svg>
+          </a>
+          <div class="footer-meta">
+            <h3>Sarayu Burugu</h3>
+            <p class="footer-tagline">Computer Science Engineer | Full Stack Developer | QA Enthusiast</p>
+          </div>
+          <nav class="footer-nav">
+            <a href="#home" data-page="home">Home</a>
+            <a href="#about" data-page="about">About</a>
+            <a href="#skills" data-page="skills">Skills</a>
+            <a href="#experience" data-page="experience">Experience</a>
+            <a href="#projects" data-page="projects">Projects</a>
+            <a href="#contact" data-page="contact">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Sarayu Burugu. All rights reserved.</p>
+          <p>Built for modern engineering excellence.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ==========================================================
+       PAGE 3: SKILLS & LEETCODE VIEW (#view-skills)
+       ========================================================== -->
+  <div class="page-view" id="view-skills">
+    <div class="page-hero-banner">
+      <div class="page-hero-container">
+        <span class="page-hero-tag">Toolkit &amp; Algorithmic Mastery</span>
+        <h1 class="page-hero-title">Technical Skills &amp; <span>LeetCode Stats</span></h1>
+        <p class="page-hero-sub">Comprehensive technical matrix covering Software Quality Assurance, Full Stack Web Engineering, Cloud Infrastructure, and 249+ LeetCode Problem Solving Achievements.</p>
+      </div>
+    </div>
+
+    <!-- SKILLS MATRIX SECTION -->
+    <section class="section" id="skills-section">
+      <div class="container">
+        <div class="skills-grid reveal-stagger">
+          <!-- Software Testing / QA -->
+          <div class="skill-card highlight-skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+              <h3>Software Testing &amp; QA</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="pill pill-qa">Manual Testing</span>
+              <span class="pill pill-qa">Functional Testing</span>
+              <span class="pill pill-qa">Regression Testing</span>
+              <span class="pill pill-qa">API Testing (Postman)</span>
+              <span class="pill pill-qa">Bug Reporting</span>
+              <span class="pill pill-qa">Jira Workflows</span>
+              <span class="pill pill-qa">Defect Lifecycle</span>
+            </div>
+          </div>
+
+          <!-- Programming -->
+          <div class="skill-card reveal">
+            <div class="skill-card-header">
+              <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+              <h3>Programming Languages</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="pill pill-primary">Java</span>
+              <span class="pill pill-primary">Python</span>
+              <span class="pill">JavaScript</span>
+              <span class="pill">TypeScript</span>
+              <span class="pill">SQL</span>
+            </div>
+          </div>
+
+          <!-- Frontend -->
+          <div class="skill-card reveal">
+            <div class="skill-card-header">
+              <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div>
+              <h3>Frontend Development</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="pill pill-primary">React</span>
+              <span class="pill">HTML5</span>
+              <span class="pill">CSS3</span>
+              <span class="pill">Bootstrap</span>
+              <span class="pill">Tailwind CSS</span>
+              <span class="pill">Vite</span>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-card reveal">
+            <div class="skill-card-header">
+              <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><circle cx="6" cy="6" r="1"/><circle cx="6" cy="18" r="1"/></svg></div>
+              <h3>Backend Development</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="pill pill-primary">Spring Boot</span>
+              <span class="pill pill-primary">REST APIs</span>
+              <span class="pill">Node.js</span>
+              <span class="pill">Express.js</span>
+              <span class="pill">Hibernate</span>
+            </div>
+          </div>
+
+          <!-- Cloud & Databases -->
+          <div class="skill-card reveal">
+            <div class="skill-card-header">
+              <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M12 12v9"/><path d="m8 17 4 4 4-4"/></svg></div>
+              <h3>Cloud &amp; Databases</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="pill pill-primary">AWS (EC2, S3, IAM)</span>
+              <span class="pill pill-primary">MySQL</span>
+              <span class="pill">PostgreSQL</span>
+              <span class="pill">Git / GitHub</span>
+            </div>
+          </div>
+
+          <!-- CS Core -->
+          <div class="skill-card reveal">
+            <div class="skill-card-header">
+              <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 12L2.1 12a10 10 0 0 1 9.9-10v10z"/><circle cx="12" cy="12" r="3"/></svg></div>
+              <h3>CS Fundamentals</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="pill">Data Structures &amp; Algorithms</span>
+              <span class="pill">DBMS</span>
+              <span class="pill">Operating Systems</span>
+              <span class="pill">Computer Networks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTEGRATED LEETCODE & PROBLEM SOLVING SECTION -->
+    <section class="section alt-bg" id="coding">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Algorithmic Excellence</span>
+          <h2 class="section-title">LeetCode &amp; Problem Solving Profile</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="coding-grid">
+          <div class="lc-stats-card reveal">
+            <div class="lc-header">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="lc-logo"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
+              <div>
+                <h3>LeetCode Profile</h3>
+                <a href="https://leetcode.com/u/sarayuuuu/" target="_blank" rel="noopener" class="lc-username">@sarayuuuu</a>
+              </div>
+            </div>
+
+            <div class="lc-quick-stats">
+              <div class="lc-qs"><span class="lc-qs-num">249+</span><span class="lc-qs-label">Problems Solved</span></div>
+              <div class="lc-qs"><span class="lc-qs-num">83.3%</span><span class="lc-qs-label">Acceptance Rate</span></div>
+              <div class="lc-qs"><span class="lc-qs-num">113</span><span class="lc-qs-label">Max Streak</span></div>
+              <div class="lc-qs"><span class="lc-qs-num">147+</span><span class="lc-qs-label">Active Days</span></div>
+            </div>
+
+            <div class="lc-difficulty">
+              <div class="lc-diff-item">
+                <div class="lc-diff-header"><span class="lc-diff-label easy">Easy</span><span class="lc-diff-count">130</span></div>
+                <div class="lc-bar"><div class="lc-bar-fill easy-fill" style="--bar-width:100%"></div></div>
+              </div>
+              <div class="lc-diff-item">
+                <div class="lc-diff-header"><span class="lc-diff-label medium">Medium</span><span class="lc-diff-count">110</span></div>
+                <div class="lc-bar"><div class="lc-bar-fill medium-fill" style="--bar-width:85%"></div></div>
+              </div>
+              <div class="lc-diff-item">
+                <div class="lc-diff-header"><span class="lc-diff-label hard">Hard</span><span class="lc-diff-count">9</span></div>
+                <div class="lc-bar"><div class="lc-bar-fill hard-fill" style="--bar-width:10%"></div></div>
+              </div>
+            </div>
+
+            <a href="https://leetcode.com/u/sarayuuuu/" target="_blank" rel="noopener" class="btn btn-outline btn-full magnetic-btn" style="margin-top:1.2rem;">
+              View Official LeetCode Profile →
+            </a>
+          </div>
+
+          <div class="lc-topics-card reveal">
+            <h3>Strong Algorithmic Areas</h3>
+            <div class="topic-chips">
+              <span class="topic-chip">Arrays &amp; Strings</span>
+              <span class="topic-chip">Trees &amp; Binary Search Trees</span>
+              <span class="topic-chip">Dynamic Programming</span>
+              <span class="topic-chip">Graph Algorithms</span>
+              <span class="topic-chip">Breadth-First Search (BFS)</span>
+              <span class="topic-chip">Depth-First Search (DFS)</span>
+              <span class="topic-chip">Trie &amp; Prefix Trees</span>
+              <span class="topic-chip">Binary Search &amp; Two Pointers</span>
+            </div>
+
+            <div class="lc-ring-chart">
+              <svg viewBox="0 0 200 200" class="ring-svg">
+                <circle cx="100" cy="100" r="85" fill="none" stroke="var(--border)" stroke-width="12"/>
+                <circle cx="100" cy="100" r="85" fill="none" stroke="#10b981" stroke-width="12" stroke-dasharray="278 534" stroke-dashoffset="0" stroke-linecap="round" class="ring-easy"/>
+                <circle cx="100" cy="100" r="85" fill="none" stroke="#f59e0b" stroke-width="12" stroke-dasharray="235 534" stroke-dashoffset="-280" stroke-linecap="round" class="ring-medium"/>
+                <circle cx="100" cy="100" r="85" fill="none" stroke="#ef4444" stroke-width="12" stroke-dasharray="20 534" stroke-dashoffset="-516" stroke-linecap="round" class="ring-hard"/>
+                <text x="100" y="92" text-anchor="middle" class="ring-total-num">249+</text>
+                <text x="100" y="115" text-anchor="middle" class="ring-total-label">Solved</text>
+              </svg>
+              <div class="ring-legend">
+                <span class="legend-item"><span class="legend-dot" style="background:#10b981"></span> Easy (130)</span>
+                <span class="legend-item"><span class="legend-dot" style="background:#f59e0b"></span> Medium (110)</span>
+                <span class="legend-item"><span class="legend-dot" style="background:#ef4444"></span> Hard (9)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUALITY ASSURANCE & TESTING ARSENAL -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Quality Engineering</span>
+          <h2 class="section-title">Manual Testing &amp; QA Mastery Arsenal</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="qa-arsenal-grid reveal-stagger">
+          <div class="qa-card">
+            <div class="qa-card-header">
+              <div class="qa-badge-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+              <h3>Black-Box Test Design</h3>
+            </div>
+            <p>Systematic test case design techniques applied to detect faults without requiring internal source access.</p>
+            <ul class="qa-checklist">
+              <li><span class="qa-check-icon">✓</span> <strong>Boundary Value Analysis (BVA):</strong> Testing edges (min, min+1, nom, max-1, max).</li>
+              <li><span class="qa-check-icon">✓</span> <strong>Equivalence Class Partitioning (ECP):</strong> Partitioning valid and invalid test domains.</li>
+              <li><span class="qa-check-icon">✓</span> <strong>Decision Table Testing:</strong> Complex business rules and multi-condition combinations.</li>
+              <li><span class="qa-check-icon">✓</span> <strong>State Transition Testing:</strong> Verifying system reactions across distinct state flows.</li>
+            </ul>
+          </div>
+
+          <div class="qa-card">
+            <div class="qa-card-header">
+              <div class="qa-badge-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+              </div>
+              <h3>Testing Execution Types</h3>
+            </div>
+            <p>Multi-layered verification ensuring enterprise stability across all deployment phases.</p>
+            <ul class="qa-checklist">
+              <li><span class="qa-check-icon">✓</span> <strong>Smoke &amp; Sanity Testing:</strong> Critical build verification before deep-dive testing.</li>
+              <li><span class="qa-check-icon">✓</span> <strong>Functional &amp; UI Testing:</strong> Validating user flows, form states, and responsive layouts.</li>
+              <li><span class="qa-check-icon">✓</span> <strong>Regression Cycles:</strong> Ensuring new features cause zero collateral damage.</li>
+              <li><span class="qa-check-icon">✓</span> <strong>Cross-Browser Matrix:</strong> Testing Chrome, Edge, Firefox, and mobile viewports.</li>
+            </ul>
+          </div>
+
+          <div class="qa-card">
+            <div class="qa-card-header">
+              <div class="qa-badge-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <h3>API Testing &amp; Bug Tracking</h3>
+            </div>
+            <p>Direct endpoint validation and transparent defect lifecycles in collaborative agile sprints.</p>
+            <ul class="qa-checklist">
+              <li><span class="qa-check-icon">✓</span> <strong>Postman Collections:</strong> Validating status codes, payloads, auth headers, and response times.</li>
+              <li><span class="qa-check-icon">✓</span> <strong>Jira Defect Management:</strong> Precise ticket documentation with repro steps &amp; evidence.</li>
+              <li><span class="qa-check-icon">✓</span> <strong>Severity vs Priority:</strong> Strategic bug triage to optimize sprint releases.</li>
+              <li><span class="qa-check-icon">✓</span> <strong>Release Sign-Offs:</strong> Verification of hotfixes and edge-case closures.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOUD ARCHITECTURE BLUEPRINT (AWS) -->
+    <section class="section alt-bg">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Infrastructure Design</span>
+          <h2 class="section-title">AWS Cloud Architecture Blueprint</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="cloud-blueprint-grid reveal-stagger">
+          <div class="cloud-node-card">
+            <span class="cloud-node-badge">Compute &amp; Scaling</span>
+            <h3>Amazon EC2 &amp; Auto Scaling</h3>
+            <p>Configured scalable compute instances with custom launch templates, Elastic Load Balancer (ALB) distribution, and target health checks for zero-downtime traffic spikes.</p>
+            <div class="cloud-specs">
+              <span class="cloud-spec-pill">ALB</span>
+              <span class="cloud-spec-pill">Auto Scaling</span>
+              <span class="cloud-spec-pill">Health Checks</span>
+            </div>
+          </div>
+
+          <div class="cloud-node-card">
+            <span class="cloud-node-badge">Network Isolation</span>
+            <h3>Custom VPC &amp; Subnets</h3>
+            <p>Designed segregated multi-tier virtual private clouds with isolated public subnets for load balancers and secure private subnets for application and database layers.</p>
+            <div class="cloud-specs">
+              <span class="cloud-spec-pill">CIDR Blocks</span>
+              <span class="cloud-spec-pill">NAT Gateway</span>
+              <span class="cloud-spec-pill">Security Groups</span>
+            </div>
+          </div>
+
+          <div class="cloud-node-card">
+            <span class="cloud-node-badge">DNS &amp; Global Traffic</span>
+            <h3>Amazon Route 53</h3>
+            <p>Configured resilient DNS management supporting weighted routing, latency-based routing, and automated failover policies to ensure high availability.</p>
+            <div class="cloud-specs">
+              <span class="cloud-spec-pill">DNS Failover</span>
+              <span class="cloud-spec-pill">Latency Routing</span>
+              <span class="cloud-spec-pill">Health Probes</span>
+            </div>
+          </div>
+
+          <div class="cloud-node-card">
+            <span class="cloud-node-badge">Database Resilience</span>
+            <h3>Amazon RDS (Multi-AZ MySQL)</h3>
+            <p>Deployed managed relational databases with synchronous standby replication across separate availability zones and automated failover capabilities.</p>
+            <div class="cloud-specs">
+              <span class="cloud-spec-pill">Multi-AZ</span>
+              <span class="cloud-spec-pill">Read Replicas</span>
+              <span class="cloud-spec-pill">Auto-Backup</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIFIED GLOBAL FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <a href="#home" class="footer-logo" data-page="home">
+            <svg class="logo-icon" viewBox="0 0 36 36" width="32" height="32"><rect width="36" height="36" rx="8" fill="var(--accent)"/><text x="18" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-size="20" font-weight="900" fill="#ffffff">SB</text></svg>
+          </a>
+          <div class="footer-meta">
+            <h3>Sarayu Burugu</h3>
+            <p class="footer-tagline">Computer Science Engineer | Full Stack Developer | QA Enthusiast</p>
+          </div>
+          <nav class="footer-nav">
+            <a href="#home" data-page="home">Home</a>
+            <a href="#about" data-page="about">About</a>
+            <a href="#skills" data-page="skills">Skills</a>
+            <a href="#experience" data-page="experience">Experience</a>
+            <a href="#projects" data-page="projects">Projects</a>
+            <a href="#contact" data-page="contact">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Sarayu Burugu. All rights reserved.</p>
+          <p>Built for modern engineering excellence.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ==========================================================
+       PAGE 4: EXPERIENCE VIEW (#view-experience)
+       ========================================================== -->
+  <div class="page-view" id="view-experience">
+    <div class="page-hero-banner">
+      <div class="page-hero-container">
+        <span class="page-hero-tag">Career &amp; Engineering Operations</span>
+        <h1 class="page-hero-title">Work Experience &amp; <span>QA Internship</span></h1>
+        <p class="page-hero-sub">Manual Software Testing Internship at Agiledigest Consulting combined with academic Full Stack Software Engineering Labs.</p>
+      </div>
+    </div>
+
+    <section class="section alt-bg" id="experience">
+      <div class="container">
+        <div class="timeline reveal">
+          <!-- EXPERIENCE 1: CURRENT QA INTERNSHIP -->
+          <div class="timeline-item active-timeline-item">
+            <div class="timeline-marker active-marker"></div>
+            <div class="timeline-card active-card">
+              <div class="timeline-card-header">
+                <div class="timeline-date-wrap">
+                  <span class="timeline-date">Sep 2026 — Present</span>
+                  <span class="current-role-badge"><span class="pulse-dot"></span> Current Role</span>
+                </div>
+                <span class="timeline-type type-qa">Remote Internship</span>
+              </div>
+              <h3 class="timeline-title">Manual Testing Intern</h3>
+              <p class="timeline-org">Agiledigest Consulting Private Limited <span class="timeline-dept">· Quality Assurance (QA) Team</span></p>
+              <ul class="timeline-list">
+                <li>Perform manual testing of web application features and user workflows.</li>
+                <li>Validate UI functionality, usability, responsiveness, and cross-browser behavior.</li>
+                <li>Identify, reproduce, document, and track software defects in Jira.</li>
+                <li>Create clear bug reports with steps to reproduce, expected behavior, and actual behavior.</li>
+                <li>Perform regression and functional testing for new and updated features.</li>
+                <li>Execute REST API endpoint validation using Postman.</li>
+              </ul>
+              <div class="timeline-tech">
+                <span>Manual Testing</span><span>Functional Testing</span><span>Regression Testing</span><span>UI/UX Testing</span><span>Bug Reporting</span><span>Jira</span><span>Postman API</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- EXPERIENCE 2: AWS SOLUTIONS ARCHITECTURE -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <span class="timeline-date">Jul 2025</span>
+                <span class="timeline-type type-sim">Virtual Simulation</span>
+              </div>
+              <h3 class="timeline-title">AWS Solutions Architecture Job Simulation</h3>
+              <p class="timeline-org">Forage (Virtual Experience Program)</p>
+              <ul class="timeline-list">
+                <li>Modeled secure, fault-tolerant cloud architectures using AWS services including EC2, Route 53, and RDS databases.</li>
+                <li>Designed custom VPC subnetworks focusing on cloud security optimization, access controls, and latency reduction.</li>
+                <li>Applied best practices for infrastructure scalability, high availability, and disaster recovery planning.</li>
+              </ul>
+              <div class="timeline-tech">
+                <span>AWS EC2</span><span>Route 53</span><span>RDS</span><span>VPC</span><span>IAM</span><span>Cloud Architecture</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- EXPERIENCE 3: JAVA FULL STACK INTERN -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+              <span class="timeline-date">May 2025 — Jul 2025</span>
+                <span class="timeline-type type-intern">10-Week Internship</span>
+              </div>
+              <h3 class="timeline-title">Java Full Stack Developer Intern</h3>
+              <p class="timeline-org">Tech Solutions Pvt. Ltd.</p>
+              <ul class="timeline-list">
+                <li>Built backend microservices and RESTful API endpoints using Spring Boot and Java.</li>
+                <li>Designed relational database schemas and integrated MySQL databases using Hibernate ORM.</li>
+                <li>Created responsive user interfaces using Bootstrap and JavaScript.</li>
+              </ul>
+              <div class="timeline-tech">
+                <span>Spring Boot</span><span>Java</span><span>MySQL</span><span>Hibernate</span><span>REST APIs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENTERPRISE CASE STUDY: OPTIMAORBIT -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Enterprise Case Study</span>
+          <h2 class="section-title">Testing Flagship Platform: OptimaOrbit</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="deep-case-study reveal">
+          <div class="dcs-header">
+            <div class="dcs-title-area">
+              <h3>OptimaOrbit Enterprise Quality Assurance</h3>
+              <p class="dcs-tagline">Agiledigest Consulting Private Limited · QA &amp; Application Development Stack</p>
+            </div>
+            <span class="dcs-meta-pill">Active Remote Internship (July 2026 – Present)</span>
+          </div>
+
+          <div class="dcs-body-grid">
+            <div class="dcs-block">
+              <h4>🎯 Scope &amp; Responsibilities</h4>
+              <p>Executed manual testing and quality assurance workflows for enterprise software solutions, including flagship platform OptimaOrbit. Designed and executed detailed manual test cases, logging defect reports and verifying edge-case performance to optimize product reliability.</p>
+            </div>
+
+            <div class="dcs-block">
+              <h4>⚡ Agile Sprint Collaboration</h4>
+              <p>Collaborated in hybrid agile sprints across application development and testing stacks. Participated in sprint planning, defect triage sessions, backlog grooming, and developer peer validations to ensure timely, robust release delivery.</p>
+            </div>
+
+            <div class="dcs-block">
+              <h4>🔍 Defect Tracking in Jira</h4>
+              <p>Documented actionable defect reports in Jira containing clear reproduction steps, environment details, expected vs actual behavior, and network logs. Tracked bug lifecycles from submission to regression re-test and closure.</p>
+            </div>
+
+            <div class="dcs-block">
+              <h4>🚀 Measurable Outcomes</h4>
+              <ul class="dcs-results-list">
+                <li><span class="qa-check-icon">✓</span> Reduced regression escape rate with exhaustive boundary-value test matrices.</li>
+                <li><span class="qa-check-icon">✓</span> Verified REST API payloads and authentication headers across multiple endpoints with Postman.</li>
+                <li><span class="qa-check-icon">✓</span> Validated responsive cross-browser rendering across Chrome, Edge, and mobile viewports.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dcs-tech-footer">
+            <span style="font-weight:700;font-size:0.9rem;color:var(--text);">Technologies &amp; Tools Used:</span>
+            <div class="dcs-tech-stack">
+              <span class="pill pill-qa">Manual Testing</span>
+              <span class="pill pill-qa">Jira</span>
+              <span class="pill pill-qa">Postman</span>
+              <span class="pill pill-qa">Regression Testing</span>
+              <span class="pill pill-qa">Functional Testing</span>
+              <span class="pill pill-qa">Agile Sprints</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AWS SOLUTIONS ARCHITECTURE CASE STUDY -->
+    <section class="section alt-bg">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Cloud Simulation</span>
+          <h2 class="section-title">AWS Scalable Infrastructure Simulation</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="deep-case-study reveal">
+          <div class="dcs-header">
+            <div class="dcs-title-area">
+              <h3>Fault-Tolerant Multi-Tier Cloud Modeling</h3>
+              <p class="dcs-tagline">Forage Virtual Experience Program · Virtual Solutions Architect (July 2025)</p>
+            </div>
+            <span class="dcs-meta-pill">AWS Certified Foundations</span>
+          </div>
+
+          <div class="dcs-body-grid">
+            <div class="dcs-block">
+              <h4>🌐 Architectural Objective</h4>
+              <p>Modeled secure, fault-tolerant cloud architectures utilizing AWS services including EC2, Route 53, and RDS databases to support high-availability enterprise web workloads with minimal latency.</p>
+            </div>
+
+            <div class="dcs-block">
+              <h4>🛡️ Network &amp; Security Isolation</h4>
+              <p>Designed custom VPC subnetworks focusing on cloud security optimization, access controls, and latency reduction. Implemented public web subnets and isolated private database subnets with strict security group boundaries.</p>
+            </div>
+
+            <div class="dcs-block">
+              <h4>🔄 High Availability &amp; Disaster Recovery</h4>
+              <p>Configured Amazon Route 53 DNS routing policies, health checks, and Amazon RDS multi-AZ standby replication to guarantee automated failover and zero data loss in the event of an outage.</p>
+            </div>
+
+            <div class="dcs-block">
+              <h4>📈 Core Principles Applied</h4>
+              <ul class="dcs-results-list">
+                <li><span class="qa-check-icon">✓</span> Principle of Least Privilege implemented via granular AWS IAM role policies.</li>
+                <li><span class="qa-check-icon">✓</span> Redundant multi-AZ compute clusters behind Application Load Balancers.</li>
+                <li><span class="qa-check-icon">✓</span> Database automated snapshots and point-in-time recovery compliance.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dcs-tech-footer">
+            <span style="font-weight:700;font-size:0.9rem;color:var(--text);">Infrastructure Stack:</span>
+            <div class="dcs-tech-stack">
+              <span class="pill pill-primary">AWS EC2</span>
+              <span class="pill pill-primary">Route 53</span>
+              <span class="pill pill-primary">RDS Multi-AZ</span>
+              <span class="pill pill-primary">VPC Subnets</span>
+              <span class="pill pill-primary">IAM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIFIED GLOBAL FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <a href="#home" class="footer-logo" data-page="home">
+            <svg class="logo-icon" viewBox="0 0 36 36" width="32" height="32"><rect width="36" height="36" rx="8" fill="var(--accent)"/><text x="18" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-size="20" font-weight="900" fill="#ffffff">SB</text></svg>
+          </a>
+          <div class="footer-meta">
+            <h3>Sarayu Burugu</h3>
+            <p class="footer-tagline">Computer Science Engineer | Full Stack Developer | QA Enthusiast</p>
+          </div>
+          <nav class="footer-nav">
+            <a href="#home" data-page="home">Home</a>
+            <a href="#about" data-page="about">About</a>
+            <a href="#skills" data-page="skills">Skills</a>
+            <a href="#experience" data-page="experience">Experience</a>
+            <a href="#projects" data-page="projects">Projects</a>
+            <a href="#contact" data-page="contact">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Sarayu Burugu. All rights reserved.</p>
+          <p>Built for modern engineering excellence.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ==========================================================
+       PAGE 5: PROJECTS VIEW (#view-projects)
+       ========================================================== -->
+  <div class="page-view" id="view-projects">
+    <div class="page-hero-banner">
+      <div class="page-hero-container">
+        <span class="page-hero-tag">Portfolio &amp; Engineering Architecture</span>
+        <h1 class="page-hero-title">Featured <span>Projects</span></h1>
+        <p class="page-hero-sub">Production-ready web applications, enterprise Java systems, AI applicant parsing tools, and financial analytics platforms.</p>
+      </div>
+    </div>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <!-- Featured Project: Chronex -->
+        <div class="project-featured reveal">
+          <div class="project-featured-image">
+            <img src="assets/project-chronex.png" alt="Chronex — AI Powered Time Companion" />
+            <div class="featured-badge">⭐ Featured Project</div>
+          </div>
+          <div class="project-featured-info">
+            <span class="project-hackathon-badge">🏆 Code Slayer 2K25 — NIT Delhi</span>
+            <h3>Chronex — AI Powered Time Companion</h3>
+            <p>An intelligent productivity assistant designed to optimize task scheduling using context-aware planning algorithms and adaptive prioritization.</p>
+            
+            <div class="project-features">
+              <span>Smart Scheduling</span>
+              <span>Google Calendar API</span>
+              <span>Voice Interaction</span>
+              <span>AI-Based Planning</span>
+            </div>
+
+            <div class="project-tech-pills">
+              <span>Python</span><span>REST APIs</span><span>Scheduling Algorithms</span><span>AI Concepts</span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/SarayuBurugu" target="_blank" rel="noopener" class="btn btn-sm btn-primary magnetic-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other Projects Grid -->
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <div class="project-card-image">
+              <img src="assets/project-mahayudh.png" alt="Mahayudh Proctoring Platform" />
+            </div>
+            <div class="project-card-body">
+              <h3>Mahayudh</h3>
+              <p>A real-time proctoring and monitoring platform featuring secure user authentication, face logging, and scalable backend architecture.</p>
+              <div class="project-tech-pills">
+                <span>React</span><span>TypeScript</span><span>Supabase</span><span>Tailwind</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-card-image">
+              <img src="assets/project-studysync.png" alt="StudySync Dashboard" />
+            </div>
+            <div class="project-card-body">
+              <h3>StudySync</h3>
+              <p>A modern student productivity dashboard helping learners manage study schedules, academic resources, and study goals.</p>
+              <div class="project-tech-pills">
+                <span>React</span><span>JavaScript</span><span>Tailwind CSS</span><span>Vite</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-card-image">
+              <img src="assets/project-voice.png" alt="Voice Assistant" />
+            </div>
+            <div class="project-card-body">
+              <h3>Voice Assistant</h3>
+              <p>A voice-controlled desktop assistant capable of speech recognition, command parsing, and external API integration for task automation.</p>
+              <div class="project-tech-pills">
+                <span>Python</span><span>REST APIs</span><span>Speech Recognition</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEEP PROJECT ARCHITECTURE CASE STUDIES -->
+    <section class="section alt-bg">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Engineering Case Studies</span>
+          <h2 class="section-title">Deep Dive: Architectural Case Studies</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <!-- PROJECT 1: MAHAYUDH -->
+        <div class="deep-case-study reveal">
+          <div class="dcs-header">
+            <div class="dcs-title-area">
+              <h3>Mahayudh — Full-Stack Real-Time Proctoring Platform</h3>
+              <p class="dcs-tagline">Automated Candidate State Validation &amp; High-Concurrency Live Telemetry</p>
+            </div>
+            <span class="dcs-meta-pill">Nov 2025 – Dec 2025 · Lead Developer</span>
+          </div>
+
+          <div class="dcs-body-grid">
+            <div class="dcs-block">
+              <h4>🎯 Problem &amp; Core Challenge</h4>
+              <p>Online evaluations require tamper-proof continuous monitoring, real-time status logging, and zero false-positive disconnections under fluctuating network conditions.</p>
+            </div>
+
+            <div class="dcs-block">
+              <h4>🛠️ Full-Stack Architecture</h4>
+              <p>Engineered with <strong>TypeScript</strong> and <strong>React.js</strong> on the frontend and <strong>Supabase</strong> on the backend. Deployed to Vercel's global edge network for sub-100ms response times.</p>
+            </div>
+
+            <div class="dcs-block">
+              <h4>🔍 QA &amp; Testing Optimization</h4>
+              <p>Engineered comprehensive client-side debugging scripts and system integration testing suites that directly reduced application crash instances by <strong>40%</strong> during intensive test simulations.</p>
+            </div>
+
+            <div class="dcs-block">
+              <h4>🔒 Security &amp; Data Integrity</h4>
+              <ul class="dcs-results-list">
+                <li><span class="qa-check-icon">✓</span> Supabase Row Level Security (RLS) policies protecting candidate session data.</li>
+                <li><span class="qa-check-icon">✓</span> Automated real-time state telemetry logging candidate focus and window focus shifts.</li>
+                <li><span class="qa-check-icon">✓</span> Resilient offline-reconnection queues preventing test-state abandonment.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dcs-tech-footer">
+            <div class="dcs-tech-stack">
+              <span class="pill pill-primary">TypeScript</span>
+              <span class="pill pill-primary">React.js</span>
+              <span class="pill pill-primary">Supabase</span>
+              <span class="pill pill-primary">Vercel</span>
+              <span class="pill pill-primary">Tailwind CSS</span>
+            </div>
+            <a href="https://github.com/SarayuBurugu" target="_blank" rel="noopener" class="btn btn-sm btn-outline magnetic-btn">
+              View Mahayudh Repo →
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 2: CHRONEX -->
+        <div class="deep-case-study reveal" style="margin-top:2rem;">
+          <div class="dcs-header">
+            <div class="dcs-title-area">
+              <h3>Chronex — AI-Powered Intelligent Time Companion</h3>
+              <p class="dcs-tagline">🏆 1st Place National Winner · Code Slayer 2K25 (NIT Delhi)</p>
+            </div>
+            <span class="dcs-meta-pill">48-Hour Sprint · 8 Independent Modules</span>
+          </div>
+
+          <div class="dcs-body-grid">
+            <div class="dcs-block">
+              <h4>🎯 Problem &amp; Core Challenge</h4>
+              <p>Dynamic schedule optimization under conflicting user priorities, fixed calendar constraints, and evolving daily workloads requires contextual intelligence beyond static calendar entries.</p>
+            </div>
+
+            <div class="dcs-block">
+              <h4>🛠️ Modular Python Architecture</h4>
+              <p>Constructed an intelligent multi-module task scheduler spanning 8 decoupled services in a high-pressure 48-hour collaborative team sprint. Connected to Google Calendar APIs and custom priority scoring engines.</p>
+            </div>
+
+            <div class="dcs-block">
+              <h4>⚡ Algorithmic Logic</h4>
+              <p>Formulated constraint-satisfaction algorithms with optimized Python logical data structures to compute collision-free, energy-aware schedules in real time.</p>
+            </div>
+
+            <div class="dcs-block">
+              <h4>🏆 Recognition &amp; Feedback</h4>
+              <ul class="dcs-results-list">
+                <li><span class="qa-check-icon">✓</span> Awarded National Winner at NIT Delhi Code Slayer 2K25 against teams across India.</li>
+                <li><span class="qa-check-icon">✓</span> Praised for modular code quality, clean REST API contracts, and intuitive execution.</li>
+                <li><span class="qa-check-icon">✓</span> Zero crashes throughout live judging demonstration under simulated stress loads.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dcs-tech-footer">
+            <div class="dcs-tech-stack">
+              <span class="pill pill-primary">Python</span>
+              <span class="pill pill-primary">REST APIs</span>
+              <span class="pill pill-primary">Contextual Logic</span>
+              <span class="pill pill-primary">Google Calendar API</span>
+            </div>
+            <a href="https://github.com/SarayuBurugu" target="_blank" rel="noopener" class="btn btn-sm btn-outline magnetic-btn">
+              View Chronex Repo →
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 3: STUDY SYNC -->
+        <div class="deep-case-study reveal" style="margin-top:2rem;">
+          <div class="dcs-header">
+            <div class="dcs-title-area">
+              <h3>StudySync — Front-End High-Performance Study Dashboard</h3>
+              <p class="dcs-tagline">Interactive Progress Tracking &amp; Academic Resource Workspace</p>
+            </div>
+            <span class="dcs-meta-pill">Feb 2026 · Frontend Engineer</span>
+          </div>
+
+          <div class="dcs-body-grid">
+            <div class="dcs-block">
+              <h4>🎯 Problem &amp; Core Challenge</h4>
+              <p>Students balance disparate tools for syllabus tracking, goal setting, and resource organization, leading to fragmentation and cognitive overload.</p>
+            </div>
+
+            <div class="dcs-block">
+              <h4>🛠️ Frontend Architecture</h4>
+              <p>Engineered a multi-page interactive portal utilizing React.js, Tailwind CSS, and Vite. Prioritized rendering speed, low latency DOM updates, and modular component hierarchy.</p>
+            </div>
+
+            <div class="dcs-block">
+              <h4>🎨 UX &amp; Interactive State</h4>
+              <p>Implemented dynamic local storage state synchronization, interactive study progress trackers, countdown timers, and responsive glassmorphism dark-mode cards.</p>
+            </div>
+
+            <div class="dcs-block">
+              <h4>🚀 Performance Benchmarks</h4>
+              <ul class="dcs-results-list">
+                <li><span class="qa-check-icon">✓</span> Sub-second initial page load with Vite bundle tree-shaking and asset optimizations.</li>
+                <li><span class="qa-check-icon">✓</span> 100% responsive test passes across mobile, tablet, laptop, and ultra-wide screens.</li>
+                <li><span class="qa-check-icon">✓</span> Full keyboard accessibility and WCAG compliant contrast ratios.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dcs-tech-footer">
+            <div class="dcs-tech-stack">
+              <span class="pill pill-primary">React.js</span>
+              <span class="pill pill-primary">JavaScript</span>
+              <span class="pill pill-primary">Tailwind CSS</span>
+              <span class="pill pill-primary">Vite</span>
+            </div>
+            <a href="https://github.com/SarayuBurugu" target="_blank" rel="noopener" class="btn btn-sm btn-outline magnetic-btn">
+              View StudySync Repo →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIFIED GLOBAL FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <a href="#home" class="footer-logo" data-page="home">
+            <svg class="logo-icon" viewBox="0 0 36 36" width="32" height="32"><rect width="36" height="36" rx="8" fill="var(--accent)"/><text x="18" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-size="20" font-weight="900" fill="#ffffff">SB</text></svg>
+          </a>
+          <div class="footer-meta">
+            <h3>Sarayu Burugu</h3>
+            <p class="footer-tagline">Computer Science Engineer | Full Stack Developer | QA Enthusiast</p>
+          </div>
+          <nav class="footer-nav">
+            <a href="#home" data-page="home">Home</a>
+            <a href="#about" data-page="about">About</a>
+            <a href="#skills" data-page="skills">Skills</a>
+            <a href="#experience" data-page="experience">Experience</a>
+            <a href="#projects" data-page="projects">Projects</a>
+            <a href="#contact" data-page="contact">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Sarayu Burugu. All rights reserved.</p>
+          <p>Built for modern engineering excellence.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ==========================================================
+       PAGE 6: CONTACT VIEW (#view-contact)
+       ========================================================== -->
+  <div class="page-view" id="view-contact">
+    <div class="page-hero-banner">
+      <div class="page-hero-container">
+        <span class="page-hero-tag">Contact &amp; Collaborations</span>
+        <h1 class="page-hero-title">Get In <span>Touch</span></h1>
+        <p class="page-hero-sub">Have a software engineering opportunity, QA role, or project collaboration? Send a direct message!</p>
+      </div>
+    </div>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <p class="contact-intro">
+              I am actively seeking software development, full-stack, cloud engineering, and QA engineering opportunities. Feel free to reach out directly!
+            </p>
+
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+                <div>
+                  <h4>Direct Email</h4>
+                  <a href="mailto:burugusarayugoud@gmail.com">burugusarayugoud@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+                <div>
+                  <h4>Phone</h4>
+                  <a href="tel:+916300455945">+91 6300455945</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                <div>
+                  <h4>Location</h4>
+                  <p>Hanamkonda, Warangal, Telangana, India</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                <div>
+                  <h4>Availability</h4>
+                  <p>Open to SDE, Full Stack &amp; QA roles · 2027 batch</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-socials">
+              <a href="https://github.com/SarayuBurugu" target="_blank" rel="noopener" class="social-icon magnetic-btn" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+              <a href="https://www.linkedin.com/in/sarayu-burugu-32b712287/" target="_blank" rel="noopener" class="social-icon magnetic-btn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="https://leetcode.com/u/sarayuuuu/" target="_blank" rel="noopener" class="social-icon magnetic-btn" aria-label="LeetCode"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg></a>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Opportunity / Collaboration" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, role, or query..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full magnetic-btn" id="submitBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
+            <p class="form-status" id="formStatus"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- COFFEE CHAT & FAST-TRACK INTERVIEW CTA -->
+    <section class="section alt-bg">
+      <div class="container">
+        <div class="chat-cta-banner reveal">
+          <span class="step-number-tag">FAST-TRACK CONTACT</span>
+          <h3>Let's Schedule a Quick 15-Minute Technical Chat</h3>
+          <p>Interested in discussing software engineering opportunities, QA workflows, or potential collaborations? I respond to all professional inquiries within 12 hours.</p>
+          <div class="chat-cta-actions">
+            <a href="mailto:burugusarayugoud@gmail.com?subject=Interview%20/%20Opportunity%20Discussion%20with%20Sarayu" class="btn btn-primary magnetic-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email Directly (12-hr Response)
+            </a>
+            <a href="tel:+916300455945" class="btn btn-outline magnetic-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call / WhatsApp: +91 6300455945
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPREHENSIVE RECRUITER & HIRING FAQ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Candidate Transparency</span>
+          <h2 class="section-title">Hiring FAQ for Engineering Leaders</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="faq-grid reveal-stagger">
+          <div class="faq-card">
+            <h4><span class="faq-q-mark">01.</span> What roles is Sarayu best fitted for?</h4>
+            <p>Software Engineer (SDE), Full Stack Developer (React / Spring Boot / Node), Cloud Developer, and Quality Assurance / Software Testing Engineer.</p>
+          </div>
+
+          <div class="faq-card">
+            <h4><span class="faq-q-mark">02.</span> What is her current availability?</h4>
+            <p>Currently pursuing B.Tech in CSE at SR University (Expected May 2027). Available for immediate remote internships, part-time co-ops, summer 2027 roles, and full-time hiring upon graduation.</p>
+          </div>
+
+          <div class="faq-card">
+            <h4><span class="faq-q-mark">03.</span> Can she work remotely or relocate?</h4>
+            <p>Yes. Currently working in a remote internship setup at Agiledigest Consulting. Fully open to relocation to Hyderabad, Bengaluru, Pune, Delhi NCR, and global remote setups.</p>
+          </div>
+
+          <div class="faq-card">
+            <h4><span class="faq-q-mark">04.</span> What is her algorithmic &amp; problem solving rigor?</h4>
+            <p>Solved 249+ DSA problems on LeetCode with an exceptional 83.3% acceptance rate, 113-day daily streak (100 Days Badge), and specialized Graph Theory training from AlgoUniversity.</p>
+          </div>
+
+          <div class="faq-card">
+            <h4><span class="faq-q-mark">05.</span> Why hire an engineer with QA experience?</h4>
+            <p>Having enterprise manual testing experience on flagship software (OptimaOrbit) ensures Sarayu writes significantly cleaner, bug-resistant code with edge-case awareness and zero defect regressions.</p>
+          </div>
+
+          <div class="faq-card">
+            <h4><span class="faq-q-mark">06.</span> What is the best way to get in touch?</h4>
+            <p>Direct email at <a href="mailto:burugusarayugoud@gmail.com" style="color:var(--accent);font-weight:700;">burugusarayugoud@gmail.com</a> or phone/WhatsApp at <strong>+91 6300455945</strong>. Response guaranteed within 12 hours.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIFIED GLOBAL FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <a href="#home" class="footer-logo" data-page="home">
+            <svg class="logo-icon" viewBox="0 0 36 36" width="32" height="32"><rect width="36" height="36" rx="8" fill="var(--accent)"/><text x="18" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-size="20" font-weight="900" fill="#ffffff">SB</text></svg>
+          </a>
+          <div class="footer-meta">
+            <h3>Sarayu Burugu</h3>
+            <p class="footer-tagline">Computer Science Engineer | Full Stack Developer | QA Enthusiast</p>
+          </div>
+          <nav class="footer-nav">
+            <a href="#home" data-page="home">Home</a>
+            <a href="#about" data-page="about">About</a>
+            <a href="#skills" data-page="skills">Skills</a>
+            <a href="#experience" data-page="experience">Experience</a>
+            <a href="#projects" data-page="projects">Projects</a>
+            <a href="#contact" data-page="contact">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Sarayu Burugu. All rights reserved.</p>
+          <p>Built for modern engineering excellence.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ===== BACK TO TOP BUTTON ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg class="btt-progress" viewBox="0 0 48 48">
+      <circle class="btt-track" cx="24" cy="24" r="20" />
+      <circle class="btt-fill" cx="24" cy="24" r="20" id="bttFill" />
+    </svg>
+    <svg class="btt-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ===== 5-BAR CURTAIN WIPING TRANSITION (.page-fx) ===== -->
+  <div class="page-fx" id="pageFx">
+    <i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+  <script src="script.js?v=3"></script>
+</body>
+</html>
